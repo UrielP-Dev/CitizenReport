@@ -19,17 +19,15 @@
         app:srcCompat="@drawable/flowe_main" />
 
     <Button
-        android:id="@+id/signupButton"
+        android:id="@+id/loginButton"
         android:layout_width="178dp"
         android:layout_height="69dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginTop="496dp"
         android:text="Registrarte"
-        app:layout_constraintBottom_toTopOf="@+id/signupButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
         tools:ignore="NotSibling" />
 
     <ImageView
@@ -46,18 +44,6 @@
         app:layout_constraintVertical_bias="0.163"
         app:srcCompat="@drawable/metepec_ayuntamiento" />
 
-    <Button
-        android:id="@+id/signupButton"
-        android:layout_width="178dp"
-        android:layout_height="69dp"
-        android:layout_marginBottom="148dp"
-        android:text="Iniciar Sesion"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="DuplicateIds" />
-
     <ImageView
         android:id="@+id/flower_down1"
         android:layout_width="144dp"
@@ -68,5 +54,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/flowe_main" />
+
+    <Button
+        android:id="@+id/loginButtton"
+        android:layout_width="177dp"
+        android:layout_height="69dp"
+        android:text="Iniciar Sesion"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginButton"
+        app:layout_constraintVertical_bias="0.226" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
