@@ -13,12 +13,21 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button registerButton = findViewById(R.id.loginButton); // Asegúrate de usar el ID correcto
+        Button registerButton = findViewById(R.id.signupButton); // Asegúrate de usar el ID correcto
+        Button loginButtton = findViewById(R.id.loginButtton);
 
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, SignUpUser.class);
+                startActivity(intent);
+            }
+        });
+
+        loginButtton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent( MainActivity.this, LoginScreen.class);
                 startActivity(intent);
             }
         });

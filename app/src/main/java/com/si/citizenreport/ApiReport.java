@@ -12,5 +12,7 @@ public interface ApiReport {
     @POST("user")
     Call<User> registerUser(@Body User user);
 
-
+    @POST("user/login")
+    Call<User> loginUser(@Body User loginDetails);
 }
+
