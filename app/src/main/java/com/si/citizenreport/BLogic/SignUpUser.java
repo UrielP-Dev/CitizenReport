@@ -1,12 +1,17 @@
-package com.si.citizenreport;
+package com.si.citizenreport.BLogic;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+
+import com.si.citizenreport.ApiReport;
+import com.si.citizenreport.R;
 import com.si.citizenreport.connection.APIConnection;
 import com.si.citizenreport.model.User;
 
@@ -58,7 +63,15 @@ public class SignUpUser extends AppCompatActivity {
             return;
         }
 
-        User user = new User( fullName, curp, phoneNumber, email, "defaultAddress", idMex, password);
+        User user = User.builder()
+                .fullName(fullName)
+                .curp(curp)
+                .phoneNumber(phoneNumber)
+                .email(email)
+                .voucherAddress("defaultAddress")
+                .idMex(idMex)
+                .password(password)
+                .build();
 
         Call<User> call = apiReport.registerUser(user);
         call.enqueue(new Callback<User>() {
@@ -66,6 +79,8 @@ public class SignUpUser extends AppCompatActivity {
             public void onResponse(Call<User> call, Response<User> response) {
                 if (response.isSuccessful()) {
                     Toast.makeText(SignUpUser.this, "User registered successfully", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(SignUpUser.this, LoginScreen.class);
+                    startActivity(intent);
                 } else {
                     Toast.makeText(SignUpUser.this, "Failed to register user", Toast.LENGTH_SHORT).show();
                 }
