@@ -6,4 +6,10 @@
     </style>
 
     <style name="Theme.CitizenReport" parent="Base.Theme.CitizenReport" />
+    <style name="BottomNavigation">
+    <item name="android:background">@color/colors1</item>
+    <item name="itemIconTint">@color/colors2</item>
+    <item name="itemTextColor">@color/colors3</item>
+    </style>
+
 </resources>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/firstFragment1"
+        android:icon="@android:drawable/ic_input_add"
+        android:title="Primero"/>
+    <item
+        android:id="@+id/secondFragment1"
+        android:icon="@drawable/baseline_add_a_photo_24"
+        android:title="Segundo"/>
+
+    <item
+        android:id="@+id/thirdFragment1"
+        android:icon="@android:drawable/ic_lock_idle_alarm"
+        android:title="Tercero"/>
+</menu>
