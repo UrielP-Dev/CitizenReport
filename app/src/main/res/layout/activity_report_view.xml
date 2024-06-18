@@ -28,7 +28,13 @@
         android:layout_height="99dp"
         android:hint="Descripción" />
 
-
+    <fragment
+        android:id="@+id/map"
+        android:layout_width="375dp"
+        android:layout_height="138dp"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        map:uiZoomControls="true"
+        />
     <TextView
         android:id="@+id/locationTextView"
         android:layout_width="384dp"

@@ -1,12 +1,13 @@
 package com.si.citizenreport.BLogic;
 
+import android.content.Intent;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+
+import androidx.fragment.app.Fragment;
 
 import com.si.citizenreport.R;
 
@@ -38,7 +39,6 @@ public class SecondFragment extends Fragment {
      * @param param2 Parameter 2.
      * @return A new instance of fragment SecondFragment.
      */
-    // TODO: Rename and change types and number of parameters
     public static SecondFragment newInstance(String param1, String param2) {
         SecondFragment fragment = new SecondFragment();
         Bundle args = new Bundle();
@@ -61,6 +61,19 @@ public class SecondFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_second, container, false);
+        View view = inflater.inflate(R.layout.fragment_second, container, false);
+
+        // Encontrar el botón y establecer el listener
+        Button button2 = view.findViewById(R.id.button2);
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Crear un intent para iniciar ReportView
+                Intent intent = new Intent(getActivity(), ReportView.class);
+                startActivity(intent);
+            }
+        });
+
+        return view;
     }
 }
