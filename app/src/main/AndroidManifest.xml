@@ -16,13 +16,13 @@
         android:theme="@style/Theme.CitizenReport"
         tools:targetApi="31">
         <activity
-            android:name=".mainPageSample"
+            android:name=".BLogic.mainPageSample"
             android:exported="false" />
         <activity
-            android:name=".LoginScreen"
+            android:name=".BLogic.LoginScreen"
             android:exported="false" />
         <activity
-            android:name=".SignUpUser"
+            android:name=".BLogic.SignUpUser"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

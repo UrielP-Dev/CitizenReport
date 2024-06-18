@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.si.citizenreport.BLogic.LoginScreen;
+import com.si.citizenreport.BLogic.SignUpUser;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override

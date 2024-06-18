@@ -1,4 +1,4 @@
-package com.si.citizenreport;
+package com.si.citizenreport.BLogic;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,6 +10,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 
+import com.si.citizenreport.ApiReport;
+import com.si.citizenreport.R;
 import com.si.citizenreport.connection.APIConnection;
 import com.si.citizenreport.model.User;
 

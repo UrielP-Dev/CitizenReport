@@ -1,4 +1,4 @@
-package com.si.citizenreport;
+package com.si.citizenreport.BLogic;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.si.citizenreport.ApiReport;
+import com.si.citizenreport.R;
 import com.si.citizenreport.connection.APIConnection;
 import com.si.citizenreport.model.User;
 
@@ -60,8 +62,9 @@ public class LoginScreen extends AppCompatActivity {
                 if (response.isSuccessful() && response.body() != null) {
                     User user = response.body();
                     // El usuario ha iniciado sesión correctamente
-                    Toast.makeText(LoginScreen.this, "Login exitoso: " + user, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginScreen.this, "Login exitoso: " + user.getFullName(), Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(LoginScreen.this, mainPageSample.class);
+                    intent.putExtra("user", user);
                     startActivity(intent);
                 } else {
                     // El login ha fallado
