@@ -63,7 +63,7 @@ public class LoginScreen extends AppCompatActivity {
                     User user = response.body();
                     // El usuario ha iniciado sesión correctamente
                     Toast.makeText(LoginScreen.this, "Login exitoso: " + user.getFullName(), Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(LoginScreen.this, mainPageSample.class);
+                    Intent intent = new Intent(LoginScreen.this, mainPageSampleU.class);
                     intent.putExtra("user", user);
                     startActivity(intent);
                 } else {

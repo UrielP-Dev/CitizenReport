@@ -11,7 +11,7 @@ import android.view.MenuItem;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.si.citizenreport.R;
 
-public class mainPageSample extends AppCompatActivity {
+public class mainPageSampleU extends AppCompatActivity {
     FirstFragment12 firstFragment = new FirstFragment12();
     ReportFragment secondFragment = new ReportFragment();
     ThirdFragment12 thirdFragment = new ThirdFragment12();

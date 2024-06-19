@@ -30,7 +30,7 @@ public class ReportDone extends AppCompatActivity {
         // Encontrar el botón y configurar el listener
         Button doneButton = findViewById(R.id.doneButton);
         doneButton.setOnClickListener(v -> {
-            Intent intent = new Intent(ReportDone.this, mainPageSample.class);
+            Intent intent = new Intent(ReportDone.this, mainPageSampleU.class);
             startActivity(intent);
         });
     }

@@ -35,7 +35,7 @@
             android:name=".BLogic.ReportView"
             android:exported="false" />
         <activity
-            android:name=".BLogic.mainPageSample"
+            android:name=".BLogic.mainPageSampleU"
             android:exported="false" />
         <activity
             android:name=".BLogic.LoginScreen"
