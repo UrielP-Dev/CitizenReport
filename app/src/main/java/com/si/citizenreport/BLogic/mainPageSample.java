@@ -7,15 +7,14 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.si.citizenreport.R;
 
 public class mainPageSample extends AppCompatActivity {
-    FirstFragment firstFragment = new FirstFragment();
-    SecondFragment secondFragment = new SecondFragment();
-    ThirdFragment thirdFragment = new ThirdFragment();
+    FirstFragment12 firstFragment = new FirstFragment12();
+    ReportFragment secondFragment = new ReportFragment();
+    ThirdFragment12 thirdFragment = new ThirdFragment12();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

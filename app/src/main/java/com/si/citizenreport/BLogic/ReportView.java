@@ -4,10 +4,11 @@ import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.location.Address;
+import android.location.Geocoder;
 import android.location.Location;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -40,6 +41,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 import java.util.Locale;
 
 import okhttp3.MediaType;
@@ -180,7 +182,9 @@ public class ReportView extends AppCompatActivity implements OnMapReadyCallback 
 
         // Crear RequestBody para los demás campos
         RequestBody description = createPartFromString(descriptionEditText.getText().toString());
-        RequestBody location = createPartFromString(currentLatLng.latitude + ", " + currentLatLng.longitude);
+
+        String locationAddress = getLocationAddress(currentLatLng);
+        RequestBody location = createPartFromString(locationAddress);
 
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
         SimpleDateFormat timeFormat = new SimpleDateFormat("HH:mm", Locale.getDefault());
@@ -189,9 +193,9 @@ public class ReportView extends AppCompatActivity implements OnMapReadyCallback 
         RequestBody date = createPartFromString(currentDate);
         RequestBody time = createPartFromString(currentTime);
         RequestBody plate = createPartFromString(plateEditText.getText().toString());
-        RequestBody status = createPartFromString("Pendiente");
+        RequestBody status = createPartFromString("PENDIENTE");
         RequestBody userId = createPartFromString("user123");
-        RequestBody managerID = createPartFromString("manager123");
+        RequestBody managerID = createPartFromString("");
 
         // Llamada a la API
         Call<Report> call = apiReport.createReport(photoPart, description, location, date, time, plate, status, userId, managerID);
@@ -214,8 +218,19 @@ public class ReportView extends AppCompatActivity implements OnMapReadyCallback 
         });
     }
 
-
-
+    private String getLocationAddress(LatLng latLng) {
+        Geocoder geocoder = new Geocoder(this, Locale.getDefault());
+        try {
+            List<Address> addresses = geocoder.getFromLocation(latLng.latitude, latLng.longitude, 1);
+            if (addresses != null && !addresses.isEmpty()) {
+                Address address = addresses.get(0);
+                return address.getAddressLine(0);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return latLng.latitude + ", " + latLng.longitude;
+    }
 
     private File convertBitmapToFile(Bitmap bitmap, String fileName) throws IOException {
         File file = new File(getCacheDir(), fileName);

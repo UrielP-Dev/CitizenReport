@@ -1,22 +1,21 @@
 package com.si.citizenreport.BLogic;
 
-import android.content.Intent;
 import android.os.Bundle;
+
+import androidx.fragment.app.Fragment;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-
-import androidx.fragment.app.Fragment;
 
 import com.si.citizenreport.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link SecondFragment#newInstance} factory method to
+ * Use the {@link ThirdFragment12#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class SecondFragment extends Fragment {
+public class ThirdFragment12 extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -27,7 +26,7 @@ public class SecondFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public SecondFragment() {
+    public ThirdFragment12() {
         // Required empty public constructor
     }
 
@@ -37,10 +36,11 @@ public class SecondFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment SecondFragment.
+     * @return A new instance of fragment ThirdFragment.
      */
-    public static SecondFragment newInstance(String param1, String param2) {
-        SecondFragment fragment = new SecondFragment();
+    // TODO: Rename and change types and number of parameters
+    public static ThirdFragment12 newInstance(String param1, String param2) {
+        ThirdFragment12 fragment = new ThirdFragment12();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -61,19 +61,6 @@ public class SecondFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_second, container, false);
-
-        // Encontrar el botón y establecer el listener
-        Button button2 = view.findViewById(R.id.button2);
-        button2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Crear un intent para iniciar ReportView
-                Intent intent = new Intent(getActivity(), ReportView.class);
-                startActivity(intent);
-            }
-        });
-
-        return view;
+        return inflater.inflate(R.layout.fragment_third, container, false);
     }
 }
