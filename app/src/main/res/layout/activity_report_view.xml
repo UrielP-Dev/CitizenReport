@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/photoImageView"
+        android:layout_width="375dp"
+        android:layout_height="153dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/darker_gray"
+        android:contentDescription="Foto"
+        android:scaleType="centerCrop" />
+
+    <Button
+        android:id="@+id/camaraButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Tomar Foto" />
+
+    <EditText
+        android:id="@+id/descriptionEditText"
+        android:layout_width="385dp"
+        android:layout_height="99dp"
+        android:hint="Descripción" />
+
+    <fragment
+        android:id="@+id/map"
+        android:layout_width="375dp"
+        android:layout_height="138dp"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        map:uiZoomControls="true"
+        />
+    <TextView
+        android:id="@+id/locationTextView"
+        android:layout_width="384dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="16dp"
+        android:enabled="false"
+        android:text="Ubicación" />
+
+    <EditText
+        android:id="@+id/plateEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Placa" />
+
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Enviar" />
+
+</LinearLayout>

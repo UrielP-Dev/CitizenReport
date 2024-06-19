@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/firstFragment1"
+        android:icon="@drawable/baseline_block_flipped_24"
+        android:title="Report"/>
+    <item
+        android:id="@+id/secondFragment1"
+        android:icon="@drawable/baseline_account_box_24"
+        android:title="Usuario"/>
+
+    <item
+        android:id="@+id/thirdFragment1"
+        android:icon="@drawable/baseline_app_settings_alt_24"
+        android:title="Configuracion"/>
+
+    <item
+        android:id="@+id/quartFragment3"
+        android:icon="@drawable/ic_email"
+        android:title="Notificaciones"/>
+</menu>

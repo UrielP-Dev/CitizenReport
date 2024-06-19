@@ -6,4 +6,19 @@
     </style>
 
     <style name="Theme.CitizenReport" parent="Base.Theme.CitizenReport" />
+    <style name="BottomNavigation">
+    <item name="android:background">@color/colors1</item>
+    <item name="itemIconTint">@color/colors2</item>
+    <item name="itemTextColor">@color/colors3</item>
+    </style>
+    <style name="MenuItem">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:drawableEnd">?android:attr/actionModeCloseDrawable</item>
+        <item name="android:drawablePadding">8dp</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
 </resources>
