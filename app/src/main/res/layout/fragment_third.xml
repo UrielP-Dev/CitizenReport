@@ -1,14 +1,194 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!-- res/layout/activity_notification_settings.xml -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BLogic.ThirdFragment12">
+    tools:context="BLogic.ThirdFragment12">
 
-    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:id="@+id/back_icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_back"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="16dp" />
+
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/volume_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sonido de notificaciones:"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/back_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="40dp" />
 
-</FrameLayout>
+    <SeekBar
+        android:id="@+id/volume_seekbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/volume_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp" />
+
+    <ImageView
+        android:id="@+id/volume_icon_min"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_volumen_off"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/volume_seekbar"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="8dp" />
+
+    <ImageView
+        android:id="@+id/volume_icon_max"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_volumen_up"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/volume_seekbar"
+        android:layout_marginEnd="35dp"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/notification_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Notificaciones:"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/volume_icon_min"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="30dp" />
+
+    <LinearLayout
+        android:id="@+id/notification_list"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/notification_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/edit_text_background"
+            android:padding="8dp"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Cuando suben un nuevo anuncio"
+                android:textSize="16sp" />
+
+            <Switch
+                android:id="@+id/switch_new_announcement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/edit_text_background"
+            android:padding="8dp"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Cuando comentan tu publicación"
+                android:textSize="16sp" />
+
+            <Switch
+                android:id="@+id/switch_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/edit_text_background"
+            android:padding="8dp"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Cuando hay reportes cerca tuyo"
+                android:textSize="16sp" />
+
+            <Switch
+                android:id="@+id/switch_nearby_reports"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/edit_text_background"
+            android:padding="8dp"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Cuando revisaron mi reporte"
+                android:textSize="16sp" />
+
+            <Switch
+                android:id="@+id/switch_report_reviewed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/edit_text_background"
+            android:padding="8dp"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Cuando mi reporte está finalizado"
+                android:textSize="16sp" />
+
+            <Switch
+                android:id="@+id/switch_report_completed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

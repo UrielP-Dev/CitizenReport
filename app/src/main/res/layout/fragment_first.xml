@@ -1,54 +1,89 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:map="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    android:padding="16dp">
+    tools:context="BLogic.FirstFragment12">
+
+    <!-- Encabezado con imagen circular -->
+    <View
+        android:id="@+id/header"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:background="#A8E6CF"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
     <ImageView
-        android:id="@+id/photoImageView"
-        android:layout_width="375dp"
-        android:layout_height="153dp"
-        android:layout_marginBottom="16dp"
-        android:background="@android:color/darker_gray"
-        android:contentDescription="Foto"
-        android:scaleType="centerCrop" />
-
-    <Button
-        android:id="@+id/camaraButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Tomar Foto" />
-
-    <EditText
-        android:id="@+id/descriptionEditText"
-        android:layout_width="385dp"
-        android:layout_height="99dp"
-        android:hint="Descripción" />
-
+        android:id="@+id/profile_image"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/circular_background"
+        android:src="@drawable/ic_profile"
+        app:layout_constraintTop_toTopOf="@id/header"
+        app:layout_constraintBottom_toBottomOf="@id/header"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
     <TextView
-        android:id="@+id/locationTextView"
-        android:layout_width="384dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="16dp"
-        android:enabled="false"
-        android:text="Ubicación" />
-
-    <EditText
-        android:id="@+id/plateEditText"
-        android:layout_width="match_parent"
+        android:id="@+id/user_name"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:hint="Placa" />
+        android:text="Nayely D."
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="16dp" />
 
-    <Button
-        android:id="@+id/submitButton"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/user_id"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Enviar" />
+        android:text="1234566"
+        app:layout_constraintTop_toBottomOf="@id/user_name"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="4dp" />
 
-</LinearLayout>
+    <!-- Opciones del menú -->
+    <LinearLayout
+        android:id="@+id/menu_options"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/user_id"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="16dp"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/user_settings"
+            style="@style/MenuItem"
+            android:text="Ajustes de usuario" />
+
+        <TextView
+            android:id="@+id/report_history"
+            style="@style/MenuItem"
+            android:text="Historial de reportes" />
+
+        <TextView
+            android:id="@+id/notifications"
+            style="@style/MenuItem"
+            android:text="Notificaciones" />
+
+        <TextView
+            android:id="@+id/support"
+            style="@style/MenuItem"
+            android:text="Soporte" />
+
+        <TextView
+            android:id="@+id/logout"
+            style="@style/MenuItem"
+            android:text="Cerrar Sesión" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
