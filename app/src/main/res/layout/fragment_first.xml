@@ -62,29 +62,44 @@
         android:layout_marginTop="16dp"
         android:padding="16dp">
 
-        <TextView
+        <Button
             android:id="@+id/user_settings"
             style="@style/MenuItem"
-            android:text="Ajustes de usuario" />
+            android:text="Ajustes de usuario"
+            android:drawableEnd="@drawable/ic_back"
+            android:drawablePadding="8dp"
+            android:layout_marginBottom="8dp"/>
 
-        <TextView
+        <Button
             android:id="@+id/report_history"
             style="@style/MenuItem"
-            android:text="Historial de reportes" />
+            android:text="Historial de reportes"
+            android:drawableEnd="@drawable/ic_back"
+            android:drawablePadding="8dp"
+            android:layout_marginBottom="8dp"/>
 
-        <TextView
+        <Button
             android:id="@+id/notifications"
             style="@style/MenuItem"
-            android:text="Notificaciones" />
+            android:text="Notificaciones"
+            android:drawableEnd="@drawable/ic_back"
+            android:drawablePadding="8dp"
+            android:layout_marginBottom="8dp"/>
 
-        <TextView
+        <Button
             android:id="@+id/support"
             style="@style/MenuItem"
-            android:text="Soporte" />
+            android:text="Soporte"
+            android:drawableEnd="@drawable/ic_back"
+            android:drawablePadding="8dp"
+            android:layout_marginBottom="8dp"/>
 
-        <TextView
+        <Button
             android:id="@+id/logout"
             style="@style/MenuItem"
-            android:text="Cerrar Sesión" />
+            android:text="Cerrar Sesión"
+            android:drawableEnd="@drawable/ic_back"
+            android:drawablePadding="8dp"
+            android:layout_marginBottom="8dp"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

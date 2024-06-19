@@ -33,6 +33,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".BLogic.NotificationSettingsActivity"/>
+        <activity android:name=".BLogic.UserDetailsActivity"/>
+        <activity android:name=".BLogic.SecondFragment"/>
+
     </application>
 
 </manifest>

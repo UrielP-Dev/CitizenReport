@@ -1,4 +1,4 @@
-<!-- res/menu/bottom_navigation.xml -->
+<?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/firstFragment"
@@ -13,11 +13,11 @@
         android:icon="@android:drawable/ic_input_add"
         android:title="Third Fragment" />
     <item
-        android:id="@+id/fourFragment"
+        android:id="@+id/fourdFragment"
         android:icon="@android:drawable/ic_input_add"
-        android:title="Third Fragment" />
+        android:title="fourd Fragment" />
     <item
         android:id="@+id/fiveFragment"
         android:icon="@android:drawable/ic_input_add"
-        android:title="Third Fragment" />
+        android:title="five Fragment" />
 </menu>

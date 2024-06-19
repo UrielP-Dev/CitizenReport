@@ -22,18 +22,18 @@ import com.si.citizenreport.R;
 public class SecondFragment extends Fragment {
 
 
-
     private RecyclerView recyclerView;
     private NotificationAdapter adapter;
     private List<Notification> notificationList;
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_second);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflar el layout para este fragmento
+        View view = inflater.inflate(R.layout.fragment_second, container, false);
 
-        recyclerView = recyclerView.findViewById(R.id.recycler_view);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView = view.findViewById(R.id.recycler_view);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
         notificationList = new ArrayList<>();
         // Añadir datos de ejemplo
@@ -43,5 +43,7 @@ public class SecondFragment extends Fragment {
 
         adapter = new NotificationAdapter(notificationList);
         recyclerView.setAdapter(adapter);
+
+        return view;
     }
 }
