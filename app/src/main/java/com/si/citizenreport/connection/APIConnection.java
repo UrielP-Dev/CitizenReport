@@ -6,7 +6,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class APIConnection {
 
-    private static final String BASE_URL = "https://api-rest-cr.nicepebble-44974112.eastus.azurecontainerapps.io/"; // Reemplaza con la URL base de tu API
+    private static final String BASE_URL = "http://10.0.2.2:8081/"; // Reemplaza con la URL base de tu API
     private static Retrofit retrofit;
 
     public static Retrofit getRetrofitInstance() {
