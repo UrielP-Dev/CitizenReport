@@ -94,6 +94,8 @@ public class ReportView extends AppCompatActivity implements OnMapReadyCallback 
             public void onClick(View v) {
                 try {
                     submitReport();
+                    Intent intent = new Intent(ReportView.this,ReportDone.class);
+                    startActivity(intent);
                 } catch (IOException e) {
                     e.printStackTrace();
                     Toast.makeText(ReportView.this, "Error al enviar el reporte", Toast.LENGTH_SHORT).show();
