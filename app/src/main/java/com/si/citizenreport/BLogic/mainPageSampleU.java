@@ -20,6 +20,7 @@ public class mainPageSampleU extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_page_sample);
+        loadFragment(secondFragment);
 
         BottomNavigationView navigation = findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(navigationSelect);
@@ -31,10 +32,10 @@ public class mainPageSampleU extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.firstFragment1:
-                    loadFragment(firstFragment);
+                    loadFragment(secondFragment);
                     return true;
                 case R.id.secondFragment1:
-                    loadFragment(secondFragment);
+                    loadFragment(firstFragment);
                     return true;
                 case R.id.thirdFragment1:
                     loadFragment(thirdFragment);
