@@ -29,7 +29,7 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyCoJSTBSrHr8xdC2D-Sa3PcxA4K5Gv42ug" />
+            android:value="" />
 
         <activity
             android:name=".BLogic.ReportView"
