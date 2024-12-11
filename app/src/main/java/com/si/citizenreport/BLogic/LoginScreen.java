@@ -75,7 +75,7 @@ public class LoginScreen extends AppCompatActivity {
             @Override
             public void onFailure(Call<User> call, Throwable t) {
                 Log.e(TAG, "Error en login: ", t);
-                Toast.makeText(LoginScreen.this, "Error en login", Toast.LENGTH_SHORT).show();
+                Toast.makeText(LoginScreen.this, "Error en login " + t, Toast.LENGTH_SHORT).show();
             }
         });
     }
